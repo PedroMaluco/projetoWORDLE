@@ -5,16 +5,25 @@ AMARELO = '\033[93m'
 CINZA = '\033[90m'
 RESET = '\033[0m'
 
+def menu():
+    print('1 - Jogar')
+    print('2 - Sair')
+    opt = int(input('Faça sua escolha: '))
+    if opt != 1 and opt != 2:
+        while opt != 1 and opt != 2:
+            print('Escolha inválida!')
+            opt = int(input('Faça sua escolha: '))
+    return opt
 
 def palpitar():
-    tentativa = input("Faça sua tentativa: ")
+    tentativa = input("Faça sua tentativa: ").lower()
     while len(tentativa) != 5:
         print('O palpite deve ser uma palavra de 5 letras!')
-        tentativa = input("Refaça seu palpite: ")
+        tentativa = input("Refaça seu palpite: ").lower()
     fragmentadoTentativa = []
     for letras in range (5):
         fragmentadoTentativa.append(tentativa[letras]) 
-    return tentativa.lower(), fragmentadoTentativa
+    return tentativa, fragmentadoTentativa
 
 def relatorio(contadorTentativas, palavrasTentadas, tentativa):
         palavrasTentadas.append(tentativa)
@@ -91,7 +100,19 @@ def main():
         print(f'Você venceu! A palavra secreta é {palavra_secreta.upper()}')
     else:
         print(f'Você perdeu! A palavra secreta é {palavra_secreta.upper()}')
+    print('Deseja jogar novamente? (S/N)')
+    resp = input('Faça sua escolha: ').upper()
+    if resp != 'S' and resp != 'N':
+        while resp != 'S' and resp != 'N':
+            print('Resposta inválida!')
+            resp = input('Faça sua escolha: ').upper()
+    return resp
 
-
-
-main()
+opt = menu()
+if opt == 1:
+    resp = main()
+    while resp == 'S':
+        resp = main()       
+    print('Até a próxima!')
+else:
+    print('Saindo do programa...')
