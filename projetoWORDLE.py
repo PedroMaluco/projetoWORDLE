@@ -70,7 +70,30 @@ def verificarPalpite(fragmentadoTentativa, tentativa, fragmentadoSorteado, palav
     return vitoria, tentativa, fragmentadoTentativa
 
 def main():
-    palavras = ["canto"]
+    palavras = [
+"canto", "abaco", "livro", "casal", "pazeo", "mudar", "cinto", "pular", "pluma",
+"velho", "campo", "caber", "rolar", "cesta", "teste", "cifra", "gente", "firme",
+"torre", "folha", "dupla", "nobre", "parta", "sorte", "ponto", "lento", "falar",
+"verde", "ferro", "corpo", "cairo", "dedos", "trato", "danos", "lindo", "custo",
+"metro", "linha", "corte", "limpo", "carta", "botar", "bando", "bolsa", "sinal",
+"festa", "canso", "caber", "mapas", "audio", "amigo", "trama", "cavar", "gesto",
+"moeda", "pisar", "breve", "troca", "senso", "curva", "terra", "couro", "morto",
+"forno", "porta", "barco", "trato", "manga", "tocar", "cavar", "nuvem", "bicho",
+"luzes", "lemos", "surto", "vazio", "dente", "ganho", "pavio", "sabor", "duelo",
+"faixa", "moita", "claro", "cubra", "furto", "noite", "vista", "haste", "cinto",
+"latas", "gordo", "cervo", "caber", "tropa", "antes", "lutar", "furar", "cetro", 
+"casco", "perna", "versa", "pular", "tonto", "bolha", "focar", "fenda", "lidar",
+"final", "retro", "magia", "cetro", "bazar", "cubra", "servo", "gueto", "navio",
+"treno", "leste", "aroma", "lousa", "perto", "cacho", "vinho", "punho", "treta",
+"gabar", "fugir", "samba", "plano", "grade", "ninho", "multa", "louca", "vapor",
+"rumor", "pecar", "tarde", "farol", "pique", "mocho", "repor", "binho", "caldo",
+"frota", "trapo", "meter", "tocar", "rolha", "banca", "prato", "moeda", "socar",
+"andar", "tinta", "fazia", "matar", "logar", "verbo", "dizer", "morro", "letra",
+"odiar", "pedra", "lento", "socar", "folga", "marca", "arcos", "fugiu", "surdo",
+"lombo", "penso", "reino", "curar", "jogar", "largo", "tiver", "regar", "solto",
+"bater", "sonho", "peste", "pardo", "borda", "cimal", "matar", "legal", "bravo",
+"tosco", "fugaz", "perua", "manso", "verao", "farpa", "grifo", "crime", "bicha"
+]
     palavra_secreta = random.choice(palavras)
 
     #A palavra sorteada é fragmentada em uma lista para avaliação
